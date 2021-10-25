@@ -19,7 +19,7 @@ function setup() {
   rect(0, 0, size, size);
 
   fill(255);
-  rect(40, 0, size/4, size)
+  rect(37, 0, size/4, size)
   rect(0, 35, size, size/4)
   // BLANK[2] (hint: 白い十字を描くには rect を二つ描こう)
 }
