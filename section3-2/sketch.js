@@ -18,8 +18,8 @@ function draw(){
 // y += vy;
   if(keyIsDown(LEFT_ARROW)){ x -= 5; }
   if(keyIsDown(RIGHT_ARROW)){ x += 5; }
-  if(keyIsDown(" ".charCodeAt(0))){ y += vy;}
-  else{y+= g*8}
+  if(keyIsDown(" ".charCodeAt(0))){ y += 2*vy;}
+  else{y+= g*10}
 
 
 
