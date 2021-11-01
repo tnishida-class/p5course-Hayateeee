@@ -9,8 +9,15 @@ function setup(){
 }
 
 function draw(){
+  noStroke();
   background(160, 192, 255);
-  count = (count + 1) % cycle;
-  // BLANK[1]
-  ellipse(width / 2, height / 2, size);
+  count = 3+(count + 1) % cycle;
+  let size=count;
+
+ ellipse(width / 2, height / 2, size);
+ fill(234, 0, 0);
+ if(keyIsDown(LEFT_ARROW)){ count -= 5; } //左キーで減速
+ if(keyIsDown(RIGHT_ARROW)){ count += 5; }//右キーで加速
+
+ if(keyIsDown(" ".charCodeAt(0))){ count-= 10; }
 }
