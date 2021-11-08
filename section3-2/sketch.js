@@ -15,11 +15,11 @@ function draw(){
   background(160, 192, 255);
   ellipse(x, y, 20, 20);
   //x += vx;
-// y += vy;
+
   if(keyIsDown(LEFT_ARROW)){ x -= 5; }
   if(keyIsDown(RIGHT_ARROW)){ x += 5; }
-  if(keyIsDown(" ".charCodeAt(0))){ y += 2*vy;}
-  else{y+= g*10}
+  if(keyIsDown(" ".charCodeAt(0))){ vy-=10; }
+y += vy;
 
 
 
@@ -34,7 +34,7 @@ vy = constrain(vy + g, -vyMax, vyMax);
 
 　// 端の処理パターン (2) 跳ね返る
   if(x < 0 || x > width){ vx = -1 * vx; }
-  if(y > height){ vy = -1 * vy; }
+  if(y > height-10){ vy = 0; }
   x = constrain(x, 0, width);
   y = constrain(y, 0, height);
 }
