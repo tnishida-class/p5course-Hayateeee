@@ -3,6 +3,7 @@
 // 練習問題：何も操作しなくてもボールが湧いてくる機能を追加しよう
 
 let balls;
+let count=0
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
@@ -16,8 +17,14 @@ function draw(){
     ellipse(b.x, b.y, b.size);
     b.x += b.vx;
     b.y += b.vy;
-    
   }
+  if(count % 6 ==0)
+  {
+    const a ={x: width/2, y: height/2, size: random(50), vx: random(1), vy: random(1)}
+balls.push(a);
+  }
+
+
 }
 
 function mouseDragged(){
