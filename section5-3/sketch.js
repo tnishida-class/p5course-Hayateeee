@@ -26,6 +26,10 @@ function isLeapYear(y){
 }
 
 function daysInYear(y){
+  if(isLeapYear(y)){
+    return 366;
+  }
+  else{return 365;}
   // BLANK[1]
 }
 
@@ -51,6 +55,13 @@ function dayOfYear(y, m, d){
 
 function dayOfWeek(y, m, d){
   // BLANK[2]
+  let count = 0;
+  for(let i = 1970; i < y; i++){
+    count += daysInYear(i);
+  }
+  count += dayOfYear(y, m, d);
+
+  return (count + 3) % 7;
 }
 
 function dayOfWeekAsString(dow){
